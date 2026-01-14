@@ -197,6 +197,7 @@ main .team .team-text p {
     max-width: 80%;
   }
 }
+/*? Features section */
 
 /* ৩. Tablets এবং ছোট Laptops-এর জন্য (৭৬৯px থেকে) */
 @media (min-width: 769px) and (max-width: 1024px) {
