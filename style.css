@@ -84,3 +84,89 @@ header .banner-image-container {
 header .banner-image-container img {
   width: 100%;
 }
+@media screen and (max-width: 480px) {
+  header {
+    padding: 15px;
+  }
+  header nav {
+    width: 100%;
+  }
+  header nav ul {
+    display: block;
+  }
+  header nav ul li {
+    width: 100%;
+    text-align: center;
+    background-color: #42424213;
+    margin-top: 2px;
+    padding: 10px 0;
+    border-radius: 3px;
+  }
+}
+/* ২. Small Tablets এবং বড় ফোনের জন্য (৪৮১px থেকে) */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+  header nav {
+    flex-direction: column;
+    gap: calc(30rem / 16);
+    text-align: center;
+  }
+  header h2 {
+    font-size: 1.5rem;
+  }
+  header nav ul {
+    gap: 10px;
+    justify-content: space-between;
+  }
+  header nav ul li {
+    padding: 10px 20px;
+  }
+  header .banner-text {
+    width: 100%;
+    margin-top: calc(20rem / 16);
+  }
+  .banner-text h1 {
+    font-size: calc(35rem / 16);
+  }
+  header .banner-image-container {
+    width: 100%;
+    margin-top: calc(10rem / 16);
+    margin-bottom: 0;
+  }
+}
+
+/* ৩. Tablets এবং ছোট Laptops-এর জন্য (৭৬৯px থেকে) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    padding: 20px 30px;
+  }
+  header h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  header nav ul {
+    gap: 0;
+  }
+  header .banner-text {
+    width: 100%;
+    margin-top: calc(40rem / 16);
+  }
+  .banner-text h1 {
+    font-size: calc(45rem / 16);
+  }
+  header .banner-image-container {
+    width: 95%;
+    margin-top: calc(10rem / 16);
+    margin-bottom: 0;
+  }
+}
+
+/* ৪. বড় Desktop এবং Monitors-এর জন্য (১০২৫px থেকে) */
+@media (min-width: 1025px) {
+  header {
+    max-width: calc(1920rem / 16); /* কন্টেন্ট অতিরিক্ত ছড়িয়ে পড়া রোধ করতে */
+    margin: 0 auto;
+  }
+}
