@@ -7,6 +7,7 @@ body {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
 }
+/* Header Section */
 header {
   background-color: rgba(255, 144, 14, 0.1);
   padding-top: calc(50rem / 16);
@@ -84,6 +85,46 @@ header .banner-image-container {
 header .banner-image-container img {
   width: 100%;
 }
+
+/* Team Section */
+main {
+  width: 100%;
+}
+main .team {
+  width: 100%;
+  padding-top: calc(85rem / 16);
+  padding-bottom: calc(130rem / 16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(73rem / 16);
+}
+main .team .team-grid {
+  width: calc(708rem / 16);
+  max-width: 50%;
+  aspect-ratio: 1/1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: calc(24rem / 16);
+}
+main .team .team-grid img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  vertical-align: middle;
+}
+main .team .team-text {
+  display: flex;
+  max-width: calc(65000% / 1920);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(24rem / 16);
+}
+main .team .team-text p {
+  margin-bottom: 0.5rem;
+}
+
+/* Media queries for responsiveness */
 @media screen and (max-width: 480px) {
   header {
     padding: 15px;
@@ -128,12 +169,32 @@ header .banner-image-container img {
     margin-top: calc(20rem / 16);
   }
   .banner-text h1 {
-    font-size: calc(35rem / 16);
+    font-size: calc(50rem / 16);
   }
   header .banner-image-container {
     width: 100%;
     margin-top: calc(10rem / 16);
     margin-bottom: 0;
+  }
+  main .team {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding-top: calc(40rem / 16);
+    padding-bottom: calc(50rem / 16);
+  }
+  main .team .team-text {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  main .team .team-grid {
+    max-width: 80%;
   }
 }
 
@@ -141,10 +202,6 @@ header .banner-image-container img {
 @media (min-width: 769px) and (max-width: 1024px) {
   header {
     padding: 20px 30px;
-  }
-  header h2 {
-    font-size: 2rem;
-    text-align: center;
   }
   header nav ul {
     gap: 0;
@@ -154,7 +211,7 @@ header .banner-image-container img {
     margin-top: calc(40rem / 16);
   }
   .banner-text h1 {
-    font-size: calc(45rem / 16);
+    font-size: calc(55rem / 16);
   }
   header .banner-image-container {
     width: 95%;
@@ -165,7 +222,8 @@ header .banner-image-container img {
 
 /* ৪. বড় Desktop এবং Monitors-এর জন্য (১০২৫px থেকে) */
 @media (min-width: 1025px) {
-  header {
+  header,
+  main .team {
     max-width: calc(1920rem / 16); /* কন্টেন্ট অতিরিক্ত ছড়িয়ে পড়া রোধ করতে */
     margin: 0 auto;
   }
