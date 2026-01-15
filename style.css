@@ -123,6 +123,52 @@ main .team .team-text {
 main .team .team-text p {
   margin-bottom: 0.5rem;
 }
+/*? Features section */
+main .features {
+  padding: 0 12.5% calc(130rem / 16) 12.5%;
+  width: 100%;
+  display: flex;
+  gap: calc(54rem / 16);
+  align-items: center;
+}
+main .features .features-text {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(25rem / 16);
+}
+main .features .features-text h2 {
+  padding-left: calc(20rem / 16);
+  border-left: 5px solid rgba(255, 144, 14, 1);
+}
+main .features .features-text .features-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: calc(20rem / 16);
+}
+main .features .features-text .features-card-container .card {
+  padding: calc(30rem / 16);
+  padding-right: calc(42rem / 16);
+  display: flex;
+  flex-direction: column;
+  gap: calc(10rem / 16);
+  box-shadow: 1px 1px 8px 2px #eee;
+  border-radius: 0.5rem;
+}
+main .features .features-text .features-card-container .card h4 {
+  color: #131313;
+  font-size: calc(20rem / 16);
+  font-weight: 600;
+}
+main .features .features-photo-container {
+  position: relative;
+}
+main .features .features-photo-container .features-photo-text {
+  position: absolute;
+}
+main .features .features-photo-container img {
+  width: 100%;
+}
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 480px) {
@@ -197,7 +243,6 @@ main .team .team-text p {
     max-width: 80%;
   }
 }
-/*? Features section */
 
 /* ৩. Tablets এবং ছোট Laptops-এর জন্য (৭৬৯px থেকে) */
 @media (min-width: 769px) and (max-width: 1024px) {
